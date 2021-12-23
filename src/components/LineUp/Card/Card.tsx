@@ -17,7 +17,7 @@ interface Props {
 export const Card: FC<Props> = ({ speaker }) => {
   const { name, type, image, bio, color } = speaker;
   return (
-    <Box m='1px'>
+    <Box m='1px' color={color === 'black' ? 'white' : 'black'}>
       <Box
         borderRadius='15px'
         bgImage={image}
@@ -27,17 +27,19 @@ export const Card: FC<Props> = ({ speaker }) => {
         bgPos='center center'
         bgRepeat='no-repeat'
         borderBottom='1px solid'
+        borderColor='black'
       />
 
       <Box bgColor={color ? color : 'black'}>
         <Heading
-          fontSize='4.5em'
+          fontSize={['3em', '2.5em', '4.5em']}
           letterSpacing='-0.04em'
           borderBottom='1px solid'
           fontWeight='700'
           lineHeight='0.8 !important'
           p='8'
-          minH='180px'
+          minH={['100px', '130px', '180px']}
+          borderColor={color === 'black' ? 'gray' : 'black'}
         >
           {name}
         </Heading>
@@ -47,6 +49,7 @@ export const Card: FC<Props> = ({ speaker }) => {
           gap='15px'
           py='4'
           px='8'
+          flexDir={['column-reverse', 'row']}
         >
           <Text maxW='70%' fontSize='.86em'>
             {bio}

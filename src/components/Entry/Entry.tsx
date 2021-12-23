@@ -9,10 +9,10 @@ export const Entry: FC = () => {
       <EntryHeader title='overview' bgColor='white' />
       <Container maxW='lg'>
         <Flex mt='10' justifyContent='space-between'>
-          <Text fontSize='28px' fontFamily='EB Garamond'>
+          <Text fontSize={['20px', '28px']} fontFamily='EB Garamond'>
             February 3-4, 2022
           </Text>
-          <Text fontSize='28px' fontFamily='EB Garamond'>
+          <Text fontSize={['20px', '28px']} fontFamily='EB Garamond'>
             Save The Date
           </Text>
         </Flex>
@@ -20,8 +20,8 @@ export const Entry: FC = () => {
         <Box pb='10'>
           <Text
             my='10'
-            pr='10'
-            fontSize='30px'
+            pr={['0', '10']}
+            fontSize={['22px', '30px']}
             lineHeight='1.5em'
             fontWeight='500'
           >
@@ -36,7 +36,7 @@ export const Entry: FC = () => {
             _hover={{ bgColor: 'black' }}
             bgColor='black'
             color='white'
-            minW='300px'
+            minW={['200px', '300px']}
             padding='28px 50px'
             letterSpacing='.8px'
             fontSize='20px'

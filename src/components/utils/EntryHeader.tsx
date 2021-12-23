@@ -23,7 +23,7 @@ export const EntryHeader: FC<Props> = ({ title, bgColor }) => {
       <Container maxW='lg'>
         <Text
           textTransform='uppercase'
-          fontSize='14px'
+          fontSize={['16px', '14px']}
           letterSpacing='0.05em'
           sx={{ '& svg': { mr: 2 } }}
         >

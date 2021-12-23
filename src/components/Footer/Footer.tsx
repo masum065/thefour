@@ -1,5 +1,16 @@
-import { Flex, FlexProps } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+import { Brand } from './Brand/Brand';
+import { Declaimer } from './Declaimer/Declaimer';
+import { FooterMenu } from './FooterMenu/FooterMenu';
+import { Social } from './Social/Social';
 
-export const Footer = (props: FlexProps) => (
-  <Flex as="footer" py="8rem" {...props} />
-);
+export const Footer = () => {
+  return (
+    <Box bgColor='black'>
+      <Brand />
+      <Social />
+      <FooterMenu />
+      <Declaimer />
+    </Box>
+  );
+};

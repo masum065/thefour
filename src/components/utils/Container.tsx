@@ -1,17 +1,19 @@
-import { Flex, useColorMode, FlexProps } from '@chakra-ui/react';
+import { Box, useColorMode } from '@chakra-ui/react';
 
-export const Container = (props: FlexProps) => {
+export const Container = ({ children }) => {
   const { colorMode } = useColorMode();
 
   const bgColor = { light: 'gray.50', dark: 'black' };
 
   const color = { light: 'black', dark: 'white' };
   return (
-    <Flex
-      direction='column'
+    <Box
+      overflowX='hidden'
+      // direction='column'
       bg={bgColor[colorMode]}
       color={color[colorMode]}
-      {...props}
-    />
+    >
+      {children}
+    </Box>
   );
 };

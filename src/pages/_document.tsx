@@ -4,8 +4,13 @@ import { ColorModeScript } from '@chakra-ui/react';
 export default class Document extends NextDocument {
   render() {
     return (
-      <Html>
+      <Html lang='en'>
         <Head>
+          <meta charSet='UTF-8' />
+          <meta
+            name='description'
+            content='This short description describes my website.'
+          />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link

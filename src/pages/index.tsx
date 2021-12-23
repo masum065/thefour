@@ -7,6 +7,7 @@ import { TopMainMarquee } from '../components/TopMainMarquee/TopMainMarquee';
 import { Entry } from '../components/Entry/Entry';
 import { RegisterMarquee } from '../components/RegisterMarquee/RegisterMarquee';
 import { LineUp } from '../components/LineUp/LineUp';
+import { Schedule } from '../components/Schedule/Schedule';
 
 const Index = () => (
   <Container>
@@ -15,9 +16,9 @@ const Index = () => (
     <Entry />
     <RegisterMarquee />
     <LineUp />
-    <Footer>
-      <Text>Footer</Text>
-    </Footer>
+    <Schedule />
+    <RegisterMarquee />
+    <Footer />
   </Container>
 );
 
