@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Girott';
+    src: url('Girott-Bold.eot');
+    src: url('Girott-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Girott-Bold.woff2') format('woff2'),
+        url('Girott-Bold.woff') format('woff'),
+        url('Girott-Bold.ttf') format('truetype'),
+        url('Girott-Bold.svg#Girott-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
