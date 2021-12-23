@@ -22,8 +22,9 @@ export const TopMainMarquee: FC = () => {
       boxSize='border-box'
       borderBottom='1px solid'
     >
-      {[...Array(10)].map((item) => (
+      {[...Array(10)].map((item, index) => (
         <Text
+          key={index}
           animation={animation}
           display='inline-block'
           py='12px'
@@ -38,20 +39,3 @@ export const TopMainMarquee: FC = () => {
     </Box>
   );
 };
-
-// @keyframes marquee {
-//   0% {
-//     transform: translate(0, 0);
-//   }
-//   100% {
-//     transform: translate(-100%, 0);
-//   }
-// }
-// @keyframes revmarquee {
-//   0% {
-//     transform: translate(-100%, 0);
-//   }
-//   100% {
-//     transform: translate(0%, 0);
-//   }
-// }

@@ -3,14 +3,9 @@ import { Button as ChakraBtn, ButtonProps } from '@chakra-ui/react';
 
 type Props = ButtonProps & LinkProps;
 
-export const Button = ({
-  href,
-  children,
-  prefetch = true,
-  ...props
-}: Props) => {
+export const Button = ({ href, children, ...props }: Props) => {
   return (
-    <Link href={href} passHref prefetch={prefetch}>
+    <Link href={href} passHref>
       <ChakraBtn
         border='1px solid'
         borderRadius='50px'

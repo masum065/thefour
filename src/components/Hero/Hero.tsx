@@ -15,15 +15,11 @@ export const Hero: FC = () => {
 
           {/* Navigator */}
           <Box mt='8'>
-            <Button
-              _hover={{ bgColor: 'primary' }}
-              bgColor='primary'
-              href='/lineup'
-            >
+            <Button _hover={{ bgColor: 'primary' }} bgColor='primary' href='/'>
               The Lineup
             </Button>
             <Button href='/about'>About</Button>
-            <Button href='/resister'>Resister</Button>
+            <Button href='/register'>Register</Button>
           </Box>
         </Box>
         <Box
