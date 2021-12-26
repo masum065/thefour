@@ -1,11 +1,10 @@
 import { Button } from '@chakra-ui/button';
 import { Box, Container, Heading, Text } from '@chakra-ui/layout';
-import { FC } from 'react';
 import { EntryHeader } from '../utils/EntryHeader';
 
-export const Schedule: FC = () => {
+export const Schedule = () => {
   return (
-    <section>
+    <section id='about'>
       <EntryHeader bgColor='white' title="WHAT'S HAPPENING" />
       <Container maxW='lg'>
         <Box py='20'>

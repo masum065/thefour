@@ -1,12 +1,10 @@
 import { Box, Text } from '@chakra-ui/layout';
-import { FC } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { keyframes } from '@chakra-ui/system';
 import { usePrefersReducedMotion } from '@chakra-ui/media-query';
 import Link from 'next/link';
+import { MdArrowRightAlt } from 'react-icons/md';
 
-export const RegisterMarquee: FC = () => {
+export const RegisterMarquee = () => {
   const marquee = keyframes`
   from { transform: translate(-100%, 0); }
   to { transform: translate(0, 0); }
@@ -33,14 +31,20 @@ export const RegisterMarquee: FC = () => {
           my='5'
           fontSize='1.35em'
           sx={{
-            svg: { mr: '30px', ml: '10px', fontsize: '0.9em' },
+            svg: {
+              mr: '30px',
+              ml: '10px',
+              fontSize: '1.5em',
+              display: 'inline-block',
+              marginBottom: '-12px',
+            },
             a: { textDecoration: 'underline' },
           }}
         >
           <Link href='/register'>
             <a>Register Now</a>
           </Link>
-          <FontAwesomeIcon icon={faArrowRight} />
+          <MdArrowRightAlt />
         </Text>
       ))}
     </Box>

@@ -1,6 +1,5 @@
 import { Box, Container, Text } from '@chakra-ui/layout';
 import { Grid } from '@chakra-ui/react';
-import { FC } from 'react';
 import { EntryHeader } from '../utils/EntryHeader';
 import { Card } from './Card/Card';
 
@@ -52,7 +51,7 @@ const speakers = [
 const bgStars = {
   pos: 'absolute',
   content: "''",
-  left: '-5.5vw',
+  left: ['-35.5vw', '-5.5vw'],
   top: '45px',
   height: '100%',
   width: '100%',
@@ -63,9 +62,9 @@ const bgStars = {
   zIndex: -1,
   bgImage: '/assets/images/black-stars-tall.png',
 };
-export const LineUp: FC = () => {
+export const LineUp = () => {
   return (
-    <section>
+    <section id='lineup'>
       <Box bgColor='primary'>
         {/* Rotate Text */}
         <Text
@@ -89,53 +88,54 @@ export const LineUp: FC = () => {
         </Text>
 
         <EntryHeader bgColor='primary' title='The Lineup' />
-        <Container
-          pos='relative'
-          py='32'
-          maxW='lg'
-          zIndex='2'
-          _before={{
-            ...bgStars,
-          }}
-          _after={{
-            ...bgStars,
-            left: 'auto',
-            right: '-5.5vw',
-            display: ['none', ''],
-          }}
-        >
-          <Grid
+        <Box overflowX={['hidden']}>
+          <Container
             pos='relative'
+            py='32'
+            maxW='lg'
             zIndex='2'
             _before={{
               ...bgStars,
-              top: 'auto',
-              bottom: '-80px',
-              left: '-6.5vw',
+              left: ['-30.5vw', '-5.5vw'],
             }}
             _after={{
               ...bgStars,
               left: 'auto',
-              top: 'auto',
-              bottom: '-80px',
-              right: '-6.5vw',
-              display: ['none', ''],
+              right: ['-29.5vw', '-5.5vw'],
             }}
-            sx={{
-              '& >div:nth-of-type(odd)': { marginRight: '0' },
-              '& div:last-child': {
-                borderLeft: '1px solid gray',
-                marginLeft: '-1px',
-              },
-            }}
-            bgColor='black'
-            templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)']}
           >
-            {speakers.map((speaker) => (
-              <Card speaker={speaker} key={speaker.name} />
-            ))}
-          </Grid>
-        </Container>
+            <Grid
+              pos='relative'
+              zIndex='2'
+              _before={{
+                ...bgStars,
+                top: 'auto',
+                bottom: '-80px',
+                left: ['-35.5vw', '-6.5vw'],
+              }}
+              _after={{
+                ...bgStars,
+                left: 'auto',
+                top: 'auto',
+                bottom: '-80px',
+                right: ['-35.5vw', '-6.5vw'],
+              }}
+              sx={{
+                '& >div:nth-of-type(odd)': { marginRight: '0' },
+                '& div:last-child': {
+                  borderLeft: '1px solid gray',
+                  marginLeft: '-1px',
+                },
+              }}
+              bgColor='black'
+              templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)']}
+            >
+              {speakers.map((speaker) => (
+                <Card speaker={speaker} key={speaker.name} />
+              ))}
+            </Grid>
+          </Container>
+        </Box>
       </Box>
     </section>
   );

@@ -1,26 +1,20 @@
 import { Box, Container, Flex, List, ListItem } from '@chakra-ui/layout';
 import { Text } from '@chakra-ui/react';
-import {
-  faInstagram,
-  faTwitter,
-  faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FC } from 'react';
+import { BsTwitter, BsInstagram, BsYoutube } from 'react-icons/bs';
 
-export const Social: FC = () => {
+export const Social = () => {
   const socialList = [
     {
       link: '#',
-      icon: faTwitter,
+      icon: <BsTwitter />,
     },
     {
       link: '#',
-      icon: faInstagram,
+      icon: <BsInstagram />,
     },
     {
       link: '#',
-      icon: faYoutube,
+      icon: <BsYoutube />,
     },
   ];
   return (
@@ -29,9 +23,11 @@ export const Social: FC = () => {
         <Box>
           <List
             display='flex'
-            gap='30px'
             alignItems='center'
             sx={{
+              '& li': {
+                marginRight: '20px',
+              },
               svg: {
                 fontSize: '25px',
                 transition: '.3s',
@@ -41,9 +37,7 @@ export const Social: FC = () => {
           >
             {socialList.map((social, index) => (
               <ListItem key={index}>
-                <a href={social.link}>
-                  <FontAwesomeIcon icon={social.icon} />
-                </a>
+                <a href={social.link}>{social.icon}</a>
               </ListItem>
             ))}
           </List>

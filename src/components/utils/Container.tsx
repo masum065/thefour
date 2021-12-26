@@ -7,12 +7,7 @@ export const Container = ({ children }) => {
 
   const color = { light: 'black', dark: 'white' };
   return (
-    <Box
-      overflowX='hidden'
-      // direction='column'
-      bg={bgColor[colorMode]}
-      color={color[colorMode]}
-    >
+    <Box bg={bgColor[colorMode]} color={color[colorMode]}>
       {children}
     </Box>
   );

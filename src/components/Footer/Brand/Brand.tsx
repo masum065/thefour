@@ -1,8 +1,7 @@
 import { Img } from '@chakra-ui/image';
 import { Box, Container, Flex, List, ListItem, Text } from '@chakra-ui/layout';
-import { FC } from 'react';
 
-export const Brand: FC = () => {
+export const Brand = () => {
   const brandList = [
     {
       link: '#',
@@ -40,8 +39,10 @@ export const Brand: FC = () => {
               display='flex'
               justifyContent='center'
               alignItems='center'
-              gap={['40px', '40px', '125px']}
               sx={{
+                '& li': {
+                  marginRight: ['30px', '40px', '125px'],
+                },
                 '& img': {
                   maxW: ['100%', '200px'],
                   maxH: '50px',

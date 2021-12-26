@@ -1,9 +1,7 @@
 import { Box, Container, List, ListItem } from '@chakra-ui/layout';
 import Link from 'next/link';
 
-import { FC } from 'react';
-
-export const FooterMenu: FC = () => {
+export const FooterMenu = () => {
   const footerMenuList = [
     {
       link: '#',
@@ -31,12 +29,12 @@ export const FooterMenu: FC = () => {
       <Box>
         <List
           display={['block', 'flex']}
-          gap='15px'
+          gap={['0px', '0px', '15px']}
           alignItems='center'
           sx={{
             li: {
               display: ['inline-block', 'block'],
-              mr: ['30px', 0],
+              mr: ['30px', '20px', 0],
               fontSize: '17px',
               textDecoration: 'underline',
               transition: '.3s',

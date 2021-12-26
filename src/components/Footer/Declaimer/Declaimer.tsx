@@ -1,7 +1,6 @@
 import { Container, Text } from '@chakra-ui/layout';
-import { FC } from 'react';
 
-export const Declaimer: FC = () => {
+export const Declaimer = () => {
   return (
     <Container pt='4' pb='12' color='#999' maxW='lg'>
       <Text fontSize='15px' sx={{ '& a': { textDecoration: 'underline' } }}>

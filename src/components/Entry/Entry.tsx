@@ -1,9 +1,8 @@
 import { Box, Container, Flex, Text } from '@chakra-ui/layout';
-import { FC } from 'react';
 import { Button } from '../utils/Button';
 import { EntryHeader } from '../utils/EntryHeader';
 
-export const Entry: FC = () => {
+export const Entry = () => {
   return (
     <section>
       <EntryHeader title='overview' bgColor='white' />

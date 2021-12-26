@@ -1,7 +1,5 @@
-import { FC } from 'react';
 import { Box, Text, Heading, Flex } from '@chakra-ui/layout';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { MdFiberManualRecord } from 'react-icons/md';
 
 interface Speaker {
   name: string;
@@ -14,7 +12,7 @@ interface Props {
   speaker: Speaker;
 }
 
-export const Card: FC<Props> = ({ speaker }) => {
+export const Card = ({ speaker }: Props) => {
   const { name, type, image, bio, color } = speaker;
   return (
     <Box m='1px' color={color === 'black' ? 'white' : 'black'}>
@@ -57,9 +55,16 @@ export const Card: FC<Props> = ({ speaker }) => {
           <Text
             fontSize='.88em'
             textTransform='uppercase'
-            sx={{ svg: { mr: 2 } }}
+            sx={{
+              svg: {
+                mr: 2,
+                display: 'inline-block',
+                marginBottom: '-3px',
+                fontSize: '1.3em',
+              },
+            }}
           >
-            <FontAwesomeIcon icon={faCircle} /> {type}
+            <MdFiberManualRecord /> {type}
           </Text>
         </Flex>
       </Box>

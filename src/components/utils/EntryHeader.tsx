@@ -1,15 +1,13 @@
 import { Box, Text } from '@chakra-ui/layout';
 import { Container } from '@chakra-ui/react';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FC } from 'react';
+import { MdFiberManualRecord } from 'react-icons/md';
 
 interface Props {
   title: string;
   bgColor: string;
 }
 
-export const EntryHeader: FC<Props> = ({ title, bgColor }) => {
+export const EntryHeader = ({ title, bgColor }: Props) => {
   return (
     <Box
       bgColor={bgColor}
@@ -25,9 +23,17 @@ export const EntryHeader: FC<Props> = ({ title, bgColor }) => {
           textTransform='uppercase'
           fontSize={['16px', '14px']}
           letterSpacing='0.05em'
-          sx={{ '& svg': { mr: 2 } }}
+          sx={{
+            '& svg': {
+              mr: 2,
+              marginBottom: '-3px',
+              fontSize: '1.3em',
+              display: 'inline-block',
+            },
+          }}
         >
-          <FontAwesomeIcon icon={faCircle} /> {title}
+          <MdFiberManualRecord />
+          {title}
         </Text>
       </Container>
     </Box>
